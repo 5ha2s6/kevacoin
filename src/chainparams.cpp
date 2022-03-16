@@ -116,7 +116,7 @@ public:
         consensus.BIP34Height = 1;
         consensus.BIP65Height = 1;
         consensus.BIP66Height = 1;
-        consensus.RandomXHeight = 46130;
+        consensus.RandomXHeight = 10;
         consensus.powLimit = uint256S("000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 2.0 * 60; // Two minutes
         consensus.nPowTargetSpacing = 2.0 * 60; // Two minutes
@@ -154,16 +154,18 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x6a;
+        pchMessageStart[0] = 0x6b;
         pchMessageStart[1] = 0xc6;
         pchMessageStart[2] = 0x07;
         pchMessageStart[3] = 0x9a;
-        nDefaultPort = 9338;
+        nDefaultPort = 9448;
         nPruneAfterHeight = 100000;
 
         const uint32_t genesisBlockReward = 0.00001 * COIN; // A small reward for the core developers :-)
         genesis = CreateGenesisBlockMain(1579143600, 585290, 0x1e0fffff, 1, genesisBlockReward);
         consensus.hashGenesisBlock = genesis.GetHash();
+        printf("genesis.GetHash = %s\n", consensus.hashGenesisBlock.ToString().c_str());
+        printf("genesis.MerkleHash = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("0x70bd30ae775c691fc8a2b7d27f37279a4f505f877e3234105f22e963a618597c"));
         assert(genesis.hashMerkleRoot == uint256S("0xe6104a982da24d09ccf867aba92abbd31b2ede9da636941367709c5ef24d3330"));
 
@@ -180,7 +182,7 @@ public:
 
         bech32_hrp = "kva";
 
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
