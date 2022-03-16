@@ -167,7 +167,7 @@ public:
         printf("genesis.GetHash = %s\n", consensus.hashGenesisBlock.ToString().c_str());
         printf("genesis.MerkleHash = %s\n", genesis.hashMerkleRoot.ToString().c_str());
         assert(consensus.hashGenesisBlock == uint256S("e0590000a303b4a0866df21b972ad9b4c515f40cdbcfeaad6c353bfb93ec55cf"));
-        assert(genesis.hashMerkleRoot == uint256S("e0590000a303b4a0866df21b972ad9b4c515f40cdbcfeaad6c353bfb93ec55cf"));
+        assert(genesis.hashMerkleRoot == uint256S("a9d959740edd82ec31f47b5b284fc616594bafd13c8cbd9efb40071e1769b8b6"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("dnsseed.kevacoin.org");
