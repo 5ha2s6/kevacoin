@@ -161,13 +161,13 @@ public:
         nDefaultPort = 9448;
         nPruneAfterHeight = 100000;
 
-        const uint32_t genesisBlockReward = 0.00002 * COIN; // A small reward for the core developers :-)
-        genesis = CreateGenesisBlockMain(1579143600, 585290, 0x1e0fffff, 1, genesisBlockReward);
+        const uint32_t genesisBlockReward = 0.00003 * COIN; // A small reward for the core developers :-)
+        genesis = CreateGenesisBlockMain(1579143600, 0, 0x1e0fffff, 1, genesisBlockReward);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("genesis.GetHash = %s\n", consensus.hashGenesisBlock.ToString().c_str());
         printf("genesis.MerkleHash = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(consensus.hashGenesisBlock == uint256S("e0590000a303b4a0866df21b972ad9b4c515f40cdbcfeaad6c353bfb93ec55cf"));
-        assert(genesis.hashMerkleRoot == uint256S("a9d959740edd82ec31f47b5b284fc616594bafd13c8cbd9efb40071e1769b8b6"));
+        assert(consensus.hashGenesisBlock == uint256S("171f4720080c79dccb722acbccf376620edbb609c968c3420ca33d202c16574c"));
+        assert(genesis.hashMerkleRoot == uint256S("eb487868795f09d90c866d4e3d570e2f359d89b042843a78541a8fe951cdcf43"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("dnsseed.kevacoin.org");
