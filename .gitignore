@@ -123,3 +123,20 @@ contrib/devtools/split-debug.sh
 .vscode
 
 cov-int
+src/data/.lock
+src/data/.walletlock
+src/data/banlist.dat
+src/data/fee_estimates.dat
+src/data/mempool.dat
+src/data/peers.dat
+src/data/wallet.dat
+src/data/blocks/blk00000.dat
+src/data/blocks/rev00000.dat
+src/data/blocks/index/000005.ldb
+src/data/blocks/index/CURRENT
+src/data/blocks/index/LOCK
+src/data/blocks/index/MANIFEST-000004
+src/data/chainstate/000005.ldb
+src/data/chainstate/CURRENT
+src/data/chainstate/LOCK
+src/data/chainstate/MANIFEST-000004
