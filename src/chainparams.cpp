@@ -161,7 +161,7 @@ public:
         nDefaultPort = 9448;
         nPruneAfterHeight = 100000;
 
-        const uint32_t genesisBlockReward = 0.00001 * COIN; // A small reward for the core developers :-)
+        const uint32_t genesisBlockReward = 0.00002 * COIN; // A small reward for the core developers :-)
         genesis = CreateGenesisBlockMain(1579143600, 585290, 0x1e0fffff, 1, genesisBlockReward);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("genesis.GetHash = %s\n", consensus.hashGenesisBlock.ToString().c_str());
